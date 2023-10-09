@@ -11,17 +11,19 @@ console.log(valueSpan);
 
 let counterValue = 0;
 
-valueSpan.textContent = counterValue;
-console.log(counterValue);
+// valueSpan.textContent = counterValue;
+// console.log(counterValue);
 
 // Zmniejszanie o 1
 decrementButton.addEventListener("click", () => {
   counterValue -= 1;
+  valueSpan.textContent = counterValue;
   console.log(counterValue);
 });
 
 // Zwiększanie o 1
 incrementButton.addEventListener("click", () => {
   counterValue += 1;
+  valueSpan.textContent = counterValue;
   console.log(counterValue);
 });
