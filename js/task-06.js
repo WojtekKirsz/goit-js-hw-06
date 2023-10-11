@@ -22,7 +22,7 @@ console.log(input);
 // Zdarzenie blur
 
 textInput.addEventListener("blur", () => {
-  if (textInput.value.length < 6) {
+  if (textInput.value.length != 6) {
     input.classList.add("invalid");
     input.classList.remove("valid");
   } else {

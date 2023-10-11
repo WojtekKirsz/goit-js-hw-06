@@ -2,10 +2,10 @@
 const inputName = document.querySelector("#name-input");
 const outputName = document.querySelector("#name-output");
 
-// Wyświetlenie elementów w consoli
-console.log(inputName);
-console.log(outputName);
-
 inputName.addEventListener("input", (event) => {
-  outputName.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === "") {
+    outputName.textContent = "Anonymous";
+  } else {
+    outputName.textContent = event.currentTarget.value;
+  }
 });

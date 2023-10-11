@@ -7,11 +7,26 @@ const ingredients = [
   "Condiments",
 ];
 
-const listOfIngredients = document.getElementById("ingredients");
+// 1. Method with forEach
 
-ingredients.forEach((ingredient) => {
+// const listOfIngredients = document.getElementById("ingredients");
+
+// ingredients.forEach((ingredient) => {
+//   const ingredientItem = document.createElement("li");
+//   ingredientItem.textContent = ingredient;
+//   ingredientItem.classList.add("item");
+//   listOfIngredients.append(ingredientItem);
+// });
+
+// 2. Method with map
+
+const ingredientsArr = ingredients.map((ingredient) => {
   const ingredientItem = document.createElement("li");
   ingredientItem.textContent = ingredient;
   ingredientItem.classList.add("item");
-  listOfIngredients.append(ingredientItem);
+  return ingredientItem;
 });
+
+const listOfIngredients = document.getElementById("ingredients");
+
+listOfIngredients.append(...ingredientsArr);
